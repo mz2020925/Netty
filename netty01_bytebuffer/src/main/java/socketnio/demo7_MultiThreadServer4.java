@@ -67,7 +67,7 @@ public class demo7_MultiThreadServer4 {
             this.name = name;
         }
 
-        // 创建线程，创建该线程的selector。下面这个方法中的代码是运行在boss线程中的
+        // 创建线程，创建该线程的selector。下面这个方法中的代码是运行在boss线程中的，因为方法被哪个线程调用，代码就在那个线程内执行。
         public void createOrUseThread(SocketChannel sc) throws IOException {
             if (!start) {  // start的作用是保证createThread()方法第一次被调用的时，if条件范围内的代码执行一次。后面再调用createThread()方法也不会在执行了
                 selector = Selector.open();

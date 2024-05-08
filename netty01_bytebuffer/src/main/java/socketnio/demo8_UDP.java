@@ -86,5 +86,11 @@ public class demo8_UDP {
         }
     }
 
+    /**
+     * 分别运行上面两种连接方式的代码，会发现：
+     * TCP连接，如果服务端读取channel到buffer，发现数据超过了buffer的容量，则下一次while循环会读取剩余数据。（这些剩余数据是存在channel中还是存在buffer中，应该不在buffer里，被放在哪里了呢）
+     * 而UDP连接，如果服务端读取channel到buffer，发现数据超过了buffer的容量，他好像是一次把channel中数据读取出来，容量之内的放到buffer中，其余的丢掉，下一次while循环什么数据也都读不到了。（我不知道如何实现这种模式）
+     */
+
 
 }

@@ -5,15 +5,20 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>org.example</groupId>
-    <artifactId>bytebuffer</artifactId>
+    <artifactId>netty02_primary</artifactId>
     <version>1.0-SNAPSHOT</version>
 
+    <properties>
+        <maven.compiler.source>8</maven.compiler.source>
+        <maven.compiler.target>8</maven.compiler.target>
+    </properties>
+
     <dependencies>
-        <!--<dependency>
+        <dependency>
             <groupId>io.netty</groupId>
             <artifactId>netty-all</artifactId>
             <version>4.1.39.Final</version>
-        </dependency>-->
+        </dependency>
         <!--控制台打印info、debug日志需要两个包，一个是lombok，另一个是logback。@Slf4j来自于lombok，作用是给当前类创建常见一个log实例。然后引入logback，log.info()才不会报错。
         另外，引入lombok，才可以使用@Data等方法-->
         <dependency>
@@ -50,4 +55,5 @@
 
 
     </dependencies>
+
 </project>
