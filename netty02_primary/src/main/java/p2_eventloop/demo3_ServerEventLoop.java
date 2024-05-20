@@ -32,6 +32,10 @@ public class demo3_ServerEventLoop {
                 }).bind(8081);
     }
 }
+
+
 /*
 一个客户端建立一个Channel，多个Channel交给一个Selector监听，一个Selector需要一个线程，一个线程可以看作被封装成EventLoop
  */
+
+
