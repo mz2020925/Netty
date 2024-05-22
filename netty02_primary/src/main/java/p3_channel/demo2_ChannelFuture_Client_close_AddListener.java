@@ -16,7 +16,7 @@ import java.net.InetSocketAddress;
 
 
 @Slf4j
-public class demo2_ChannelFuture_Client_close2 {
+public class demo2_ChannelFuture_Client_close_AddListener {
     public static void main(String[] args) throws InterruptedException {
         NioEventLoopGroup group = new NioEventLoopGroup(2);
         ChannelFuture channelFuture = new Bootstrap()

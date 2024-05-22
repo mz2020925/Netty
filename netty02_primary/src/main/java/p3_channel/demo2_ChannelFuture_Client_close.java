@@ -23,7 +23,7 @@ public class demo2_ChannelFuture_Client_close {
                 .handler(new ChannelInitializer<NioSocketChannel>() {
                     @Override
                     protected void initChannel(NioSocketChannel nioSocketChannel) throws Exception {
-                        nioSocketChannel.pipeline().addLast(new LoggingHandler(LogLevel.DEBUG));
+                        nioSocketChannel.pipeline().addLast(new LoggingHandler(LogLevel.DEBUG));  // TODO 这里加这个io.netty.handler.logging.LoggingHandler有什么用
                         nioSocketChannel.pipeline().addLast(new StringEncoder());  // 意思就是客户端给的是一个字符串，这里需要编码成
                     }
                 })
